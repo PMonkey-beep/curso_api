@@ -1,147 +1,31 @@
 import express from 'express';
+
+import alunoController from './controller/alunoController.js';
+import carroController from './controller/carrosController.js';
+import cursoController from './controller/cursoController.js';
+import crimeController from './controller/crimesController.js';
+import livroController from './controller/livrosController.js';
+import pizzaController from './controller/pizzaController.js';
+import serieController from './controller/seriesController.js';
+import animeController from './controller/animesController.js';
+import prisioneiroController from './controller/prisioneirosController.js';
+import roupaController from './controller/roupaController.js';
+
 const api = express();
 api.use(express.json());
 
 
-// Tabela Livros
-
-api.get('/livros', async (req, resp) => {
-    let registros = await listarlivros();
-    resp.send(registros)
-});
-
-api.post('/livros', async (req, resp) => {
-    let novolivros = req.body;
-
-    let id = await Inserirlivros(novolivros);
-    resp.send({ novoId: id});
-});
-
-
-// Tabela Carros
-
-api.get('/carros', async (req, resp) => {
-    let registros = await listarcarros();
-    resp.send(registros)
-});
-
-api.post('/carros', async (req, resp) => {
-    let novocarros = req.body;
-
-    let id = await Inserircarros(novocarros);
-    resp.send({novoId: id});
-});
-
-// Series
-
-api.get('/series', async (req, resp) => {
-    let registros = await listarseries();
-    resp.send(registros) 
-});
-
-api.post('/series', async (req, resp) =>{
-    let novoseries = req.body;
-
-    let id = await Inserirseries(novoseries);
-    resp.send({novoId: id})
-});
-
-// Tabela Pizzas
-
-api.get('/pizzas', async (req, resp) => {
-    let registros = await listarpizzas();
-    resp.send(registros)
-});
-
-api.post('/pizzas', async (req, resp) => {
-    let novopizzas = req.body;
-
-    let id = await Inserirpizzas(novopizzas);
-    resp.send({novoid: id})
-});
-
-// Tabela Animes
-
-api.get('/animes', async (req, resp) => {
-    let registros = await listaranimes();
-    resp.send(registros)
-});
-
-api.post('/animes', async (req, resp) => {
-    let novoanimes = req.body;
-
-    let id = await Inseriranimes(novoanimes);
-    resp.send({novoId: id})
-});
-
-// Tabela Prisioneiros
-
-api.get('/prisioneiros', async (req, resp) =>{
-    let registros = await listarprisioneiros();
-    resp.send(registros)
-});
-
-api.post('/prisioneiros', async (req, resp) => {
-    let novoprisioneiros = req.body;
-
-    let id = await Inserirprisioneiros(novoprisioneiros);
-    resp.send({novoId: id})
-});
-
-// Tabela Roupas
-
-api.get('/roupa', async (req,resp) => {
-    let registros = await listarroupa();
-    resp.send(registros)
-});
-
-api.post('/roupa', async (req, resp) => {
-    let novoroupa = req.body
-
-    let id = await Inserirroupa(novoroupa);
-    resp.send({novoId: id})
-});
-
-// Tabela Alunos
-
-api.get('/aluno', async (req, resp) => {
-    let registros = await listaraluno();
-    resp.send(registros)
-});
-
-api.post('/aluno', async (req, resp) => {
-    let novoaluno = req.body
-
-    let id = await Inserialuno(novoaluno);
-    resp.send({novoId: id})
-});
-
-// Tabela Curso
-
-api.get('/curso', async (req, resp) => {
-    let registros = await listarcurso();
-    resp.send(registros)
-});
-
-api.post('/curso', async (req, resp) => {
-    let novocurso = req.body
-
-    let id = await Inserircurso(novocurso);
-    resp.send({novoId: id})
-});
-
-// Tabela Crimes
-
-api.get('/crimes', async (req, resp) => {
-    let registros = await listarcrimes();
-    resp.send(registros)
-});
-
-api.post('/crimes', async (req, resp) => {
-    let novocrimes = req.body
-
-    let id = await Inserircrimes(novocrimes);
-    resp.send({novoId: id})
-});
+api.use('/aluno', alunoController);
+api.use('/carros', carroController);
+api.use('/curso', cursoController);
+api.use('/crimes', crimeController);
+api.use('/livros', livroController);
+api.use('/pizzas', pizzaController);
+api.use('/series', serieController);
+api.use('/animes', animeController);
+api.use('/prisioneiros', prisioneiroController);
+api.use('/roupa', roupaController);
 
 api.listen(5010, () => console.log('Api subiu com sucesso'));
+
+

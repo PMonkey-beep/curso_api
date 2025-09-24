@@ -9,11 +9,19 @@
   "type": "module",
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "mysql2": "^3.14.3",
+    "mysql2": "^3.15.1",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PMonkey-beep/curso_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PMonkey-beep/curso_api/issues"
+  },
+  "homepage": "https://github.com/PMonkey-beep/curso_api#readme",
+  "description": ""
 }

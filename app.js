@@ -1,14 +1,3 @@
-import { listarlivros, Inserirlivros } from "./livrosRepository.js";
-import { listarcarros, Inserircarros } from "./carrosRepository.js";
-import { listarseries,Inserirseries } from "./seriesRepository.js";
-import { listarpizzas, Inserirpizzas } from "./pizzaRepository.js";
-import { listaranimes, Inseriranimes } from "./animesRepository.js";
-import { listarprisioneiros, Inserirprisioneiros } from "./prisioneirosRepository.js";
-import { listarroupa, Inserirroupa } from "./roupaRepository.js";
-import { listaraluno, Inserialuno } from "./alunosRepository.js";
-import { listarcurso, Inserircurso } from "./cursoRepository.js";
-import { listarcrimes, Inserircrimes } from "./crimesRepository.js";
-
 import express from 'express';
 const api = express();
 api.use(express.json());

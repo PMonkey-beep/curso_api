@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarpizzas, consultarpizza, filtrarpizzapornome, inserirpizza, alterarPizza, removerPizza } from '../repository/pizzasRepository.js';
+import { listarpizzas, consultarpizza, filtrarpizzapornome, inserirpizza, alterarpizza, removerpizza } from '../repository/pizzaRepository.js';
 
 const router = Router();
 
@@ -27,12 +27,12 @@ router.post('/', async (req, resp) => {
 router.put('/:id', async (req, resp) => {
     let id = req.params.id;
     let novosdados = req.body;
-    let info = await alterarPizza(id, novosdados);
+    let info = await alterarpizza(id, novosdados);
     resp.send(info);
 });
 
 router.delete('/:id', async (req, resp) => {
-    let info = await removerPizza(req.params.id);
+    let info = await removerpizza(req.params.id);
     resp.send(info);
 });
 

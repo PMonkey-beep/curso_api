@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarprisioneiros, consultarprisioneiro, filtrarprisioneiropornome, inserirprisioneiro, alterarprisioneiro, removerprisioneiro } from './repository/prisioneirosRepository.js';
+import { listarprisioneiros, consultarprisioneiro, filtrarprisioneiropornome, inserirprisioneiro, alterarprisioneiro, removerprisioneiro } from '../repository/prisioneirosRepository.js';
 
 const router = Router();
 

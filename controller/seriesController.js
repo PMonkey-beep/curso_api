@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarseries, consultarserie, filtrarseriepornome, inserirserie, alterarserie, removerserie } from './repository/seriesRepository.js';
+import { listarseries, consultarserie, filtrarseriepornome, inserirserie, alterarserie, removerserie } from '../repository/seriesRepository.js';
 
 const router = Router();
 

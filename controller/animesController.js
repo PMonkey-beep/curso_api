@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listaranimes, consultaranime, filtranimepornome, inseriranime, alteraranime, removeranime } from './repository/animesRepository.js';
+import { listaranimes, consultaranime, filtraranimepornome, inseriranime, alteraranime, removeranime } from '../repository/animesRepository.js';
 
 const router = Router();
 
@@ -14,7 +14,7 @@ router.get('/:id', async (req, resp) => {
 });
 
 router.get('/filtro/nome/:nome', async (req, resp) => {
-    let registros = await filtranimepornome(req.params.nome);
+    let registros = await filtraranimepornome(req.params.nome);
     resp.send(registros);
 });
 

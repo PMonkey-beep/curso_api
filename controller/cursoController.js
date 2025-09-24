@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarcurso, consultarcurso, filtrarcursopornome, inserircuso, alterarcurso, removercurso } from './repository/cursoRepository.js';
+import { listarcurso, consultarcurso, filtrarcursopornome, inserircuso, alterarcurso, removercurso } from '../repository/cursoRepository.js';
 
 const router = Router();
 

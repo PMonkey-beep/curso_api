@@ -12,7 +12,7 @@ export async function listaraluno() {
 }
 
 
-export async function consultarialuno(id) {
+export async function consultaraluno(id) {
     const comando = `
         select *
             from aluno
@@ -52,7 +52,7 @@ export async function inseriraluno(novoaluno) {
 }
 
 
-export async function alteraluno(id, novosdados) {
+export async function alteraraluno(id, novosdados) {
     const comando = `
         update aluno
             set nome = ?,

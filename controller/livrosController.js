@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarlivros, consultarlivro, filtrarlivropornome, inserirlivro, alterarlivro, removerlivro } from '.repository/livrosRepository.js';
+import { listarlivros, consultarlivro, filtrarlivropornome, inserirlivro, alterarlivro, removerlivro } from '../repository/livrosRepository.js';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarroupa, consultarroupa, filtrarroupapornome, inserirroupa, alterarroupa, removerroupa } from './repository/roupaRepository.js';
+import { listarroupa, consultarroupa, filtrarroupapornome, inserirroupa, alterarroupa, removerroupa } from '../repository/roupaRepository.js';
 
 const router = Router();
 

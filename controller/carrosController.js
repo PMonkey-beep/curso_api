@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarcarros, consultarcarro, filtrarcarropornome, inserircarro, alterarcarro, removercarro } from '../repository/carrosRepository.js';
+import { listarcarros, consultarcarro, filtrarcarropormodelo, inserircarro, alterarcarro, removercarro } from '../repository/carrosRepository.js';
 
 const router = Router();
 

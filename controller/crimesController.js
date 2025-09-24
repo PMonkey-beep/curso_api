@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { listarcrimes, consultarcrime, filtrarcrimepornome, inserircrime, alterarcrime, removercrime } from './repository/crimesRepository.js';
+import { listarcrimes, consultarcrime, filtrarcrimepornome, inserircrime, alterarcrime, removercrime } from '../repository/crimesRepository.js';
 
 const router = Router();
 

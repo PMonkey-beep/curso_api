@@ -24,7 +24,7 @@ export async function consultarpizza(id) {
 }
 
 
-export async function filtrarpiaporpornome(nome) {
+export async function filtrarpizzapornome(nome) {
     const comando = `
         select *
             from pizzas
